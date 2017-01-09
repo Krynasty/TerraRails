@@ -1,0 +1,338 @@
+<style>
+	h3.ex1
+	{
+		width: 70%; 
+		text-align: left;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	h4.ex2
+	{
+		border-radius: 12.5px;
+/* border: 2px solid #73AD21;*/
+    	padding: 20px;
+    	width: 100px;
+    	height: 50px); 
+		width: 70%;
+		text-align: left;
+		font-size: 12px;
+		background-color: #566471;
+		box-shadow: #E8E7E5 2px 2px;
+		color:white;
+	}
+
+	}
+</style>
+
+									<h2 style=color:white;background:#ad2401;height:50px;> <u>How to install Ruby </u></h2>
+
+<h3 CLASS="ex1">
+	<p> 
+		Install curl (allows you to download files and dependencies from a WEB Link) if this command below does not work, read the log in the terminal and there will be a link like the above in which to execute. then run this command again.
+	<p>
+</h3>
+<h4 CLASS="ex2">
+	<p> 
+		 sudo apt-get install curl</blockquote>
+	</p>
+</h4>
+
+
+
+<h3 CLASS="ex1">
+	<p>
+		Use curl to download RVM (ruby version manager).
+	</p>
+</h3>
+<h4 CLASS="ex2">
+	<p>  
+		$ \curl https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Download ruby dependancies (base files and what it needs).
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ sudo apt install ruby
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Allows the terminal to use RVM when the terminal restarts.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ source ~/.rvm/scripts/rvm
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Check to see if RVM is being used. and checks to see what available ruby dependencies we can download.different versions use different conventions.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rvm list known
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Install ruby through RVM.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rvm install ruby 2.3.0
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Add documentation to ruby version 2.3.0, this allows it to be used without reinstalling every time we open the terminal.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rvm docs generate -ri
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Check the version of ruby.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ ruby -v
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Begin useing certain versions of ruby, you will want to install the documentation as well. This is written down in the terminal once this command has been run. 
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rvm use 2.2.4
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Install rails for ruby.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ sudo apt install ruby-railties
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Place this in your ".bashrc" file in your HOME directory(folder) at the bottom. Please bear in mind that the ".bashrc" is classed as a hidden folder. So right click and check the "show hidden folders".
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting <br>
+		[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Build the rails application, but first go to the directory you want to store it if its desktop type this first, and yes it is case sensitive. (this changes you to a directory in the terminal (a file locations in the terminal).
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ cd /home/yourname/directory/path_you_want_to_use_place_your_folder-structure<br>
+		$ rails new (filename)<br>
+		example:<br>
+		rails new webserver<br>
+		rails new application<br>
+		rails new
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Because you don't automatically move to the folder you created with your project in. all the current directories that are inside the directory you are in.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ ls
+		Documents Desktop Music Pictures Downloads
+		$ cd /YourProjectFileLocation
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+		Move to the directory with your rails application in it.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ cd /home/Yourname/whereveryouputit/(filename)
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Install the bundler gems.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ bundle install
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Install bundler as a gem.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ gem install bundler
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Install mysql, nodejs and imageMagic.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ sudo apt-get install mysql-server nodejs imagemagick
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Check the ruby rails version.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rails -v
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Host the local server (a server that doesnt need to be hosted on a server, but can be hosted on a PC or laptop.)
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ rails s
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		your server should have no problems booting up, if no problems have arisen, open a browser and enter this at the address bar.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		http://localhost:3000
+	</p
+
+<h2> <u>How to install MySQL database </u> </h2>
+
+
+<h3 class="ex1">
+	<p>
+		Install the mysql gem.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		gem install mysql2
+	</p>
+</h4>
+<h3 class="ex1">
+	<p>
+		Open up your "Gemfile" at the root location and enter in at the bottom, this will allow you to use mysql as a gem to login and access your database for MySQL.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	gem 'mysql2'
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		To login to mysql from the terminal. when you press enter on this command. it will prompt you for a password. The password should be whatever you set is to when you installed mysql via the apt-get command. Check below if you cannot login to MySQL.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		mysql -u root -p 
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Create a new database. You should be in the mysql software in the terminal, once logged in. 
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		mysql> CREATE DATABASE (database name hereTes)
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		In this documentation are 2 files. Place the "database.yml" and "secrets.yml" to the "config" folder of your rails project. Because we are using "MYSQL" go to the "gemfile" and at the bottom add a gem that says.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ gem 'mysql2'
+	</p>
+</h4>
+
+<h3 class="ex1">
+	<p>
+		Update your gemfile when you have added a gem into your gemfile so the project can use it. This will rebuild your project to allow you to use and use more gems.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+		$ bundle install
+	</p>
+</h4>
+
+<br>
+<br>
+<br>
+<br>

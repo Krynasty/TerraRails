@@ -1,0 +1,7 @@
+
+<% @post.each do |x| %>
+
+	<%= x.description %><br>
+	<%= image_tag x.image.url(:thumb) %>
+<br><br>
+<% end %>

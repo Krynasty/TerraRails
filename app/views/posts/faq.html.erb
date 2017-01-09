@@ -1,0 +1,167 @@
+<style>
+	h3.ex1
+	{
+		width: 70%; 
+		text-align: left;
+		font-size: 16px;
+		
+	}
+	h4.ex2
+	{
+		border-radius: 12.5px;
+    /*	border: 2px solid #73AD21;  */
+    	padding: 20px;
+    	width: 100px;
+    	height: 50px); 
+		width: 70%;
+		text-align: left;
+		font-size: 12px;
+		background-color: #566471;
+		box-shadow: #E8E7E5 2px 2px;
+		color:white;
+	}
+</style>
+
+
+				<h2 style=color:white;background:#ad2401;height:50px;> <u> Question Base </u>
+
+<h3 class="ex1">
+	<p>
+	What is MySQL / MySQLD / MySQL2?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	MySQL is a database software that can be used to create a "relational database".
+	</p>
+</h4>
+
+
+
+<h3 class="ex1">
+	<p>
+	What is a relational database?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	It's a series of seperated database tables than can be related with the use of primary keys and foreign keys.
+	</p>
+</h4>
+
+
+
+<h3 class="ex1">
+	<p>
+	What is RVM?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	RVM is a software that can change different versions of ruby as and when a project requires them, for example. If you have an old software that uses an outdated version of ruby, you can still go back and code in that version. The reason why you would use different versions of ruby is that some of the conventions used (the way in which code operates when you write it out) can be different from version to version
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+	What is ruby?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	Ruby is an object orientated programming language, it is the base programming language used for interacting with objects on a website in your project.
+	</p>
+</h4>
+
+
+
+<h3 class="ex1">
+	<p>
+	What is Rails?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	Rails is an addon/plugin for Ruby, it allows Web functionality and allows code from Ruby to be used on the webpage via their custom "html.erb" files.
+	</p>
+</h4>
+
+
+
+
+<h3 class="ex1">
+	<p>
+	What are gems?
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	Gems are essentially "library" files. They allow access to extra functionality without having to write a framework or another library file in order to use it. For example. The "bundler" gem allows us to bundle all our libraries together and activate them so we can keep an archive of library files seperate from the ones we are using and the ones we are not.
+	</p>
+</h4>
+
+					<h2 style=color:white;background:#ad2401;height:50px;> <u>FAQ Section </u>
+
+
+<h3 class="ex1">
+	<p>
+		I have to reinstall RVM/Ruby/Rails everytime i open the terminal.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	when I open a new terminal, rvm,ruby and/or rails is no longer installed. Place these two lines of code into your "bash.rc" file inside your home folder/directory<br><br>
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting<br>
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"<br><br>
+
+Once you have placed the two lines above into bash.rc reinstall ruby,rails and rvm and open a new terminal and type<br>
+$ ruby -v <br>
+$ rails -v<br>
+$ rvm -v
+	</p>
+</h4>
+
+
+
+<h3 class="ex1">
+	<p>
+	If the bundle isnt installing properly or you get an error with installing certain gems.check your ruby,rails and rvm versions by typing. <br>
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	$ rvm -v <br>
+	$ rails -v <br>
+	$ ruby -v<br><br> 
+
+	If they do not show their versions, try installing the one without a version and then try <br><br>
+	$ gem install bundler<br>
+	$ bundle install<br>
+	</p>
+</h4>
+
+
+<h3 class="ex1">
+	<p>
+	I cannot log into MySQL as ROOT.
+	</p>
+</h3>
+<h4 class="ex2">
+	<p>
+	Open up your file browser and go to your project folder you have made. then navigate to the folder called "config" this folder will have a file inside that you may have already copied over from before. called Database.yml" inside there is a section that says username and passwords under development,test and production. change this to the desired password and click save. the default should be:<br><br>
+
+	  username: root <br>
+	  password: password <br><br>
+
+If the password section is empty, it should be the password you set. If it isn't change the empty password field to what you want, and save. Go to the terminal and try logging in again.
+	</p> 
+</h4>
+
+
+<br>
+<br>
+<br>
+<br>
+

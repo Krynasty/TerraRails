@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <title>TerrabaseWeb</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<%= csrf_meta_tags %>
+	<!-- css here for bootstrap-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    
+    <style>
+    	body {
+	        padding-top: 70px;
+	        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    	}
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to "Terrabase", root_url, class: "navbar-brand" %>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                    	<!-- checks to see if the current user is logged in -->
+                    <%- if current_user %>
+                        <!-- if logged in, you will be able to see all posts. -->
+                        <li>
+                            <%= link_to "Archive", posts_path %>
+                        </li>  
+                        <li>
+                            <!--sends you to the tutorial page to install ruby etc -->
+                            <%= link_to "Tutorial", posts_guide_path %>
+                        </li>
+                        
+                        <li>
+                           <%= link_to "Help guide", posts_faq_path %>
+                        </li>
+                            <!-- Sends you to the post submission page  -->    
+                        <li>
+                            <%= link_to "Post", new_post_path %>
+                        </li> 
+                        
+                        <li> 
+                            <%= link_to "Logout", destroy_user_session_path, method: :delete, confirm: "Are you sure?"%>
+                        </li>
+                    	<!-- if the user is logged in, then show login and registration tabs-->
+                    <% else %>                                            
+                    	<!-- user login page -->
+						<li>
+                    		<%= link_to "Login", new_user_session_path %>
+                    	</li>
+                    	<!-- register new accounts page -->
+                    	<li>
+                    		<%= link_to "Register", new_user_registration_path %>
+                    	</li>
+
+                    <% end %>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+    <% flash.each do |a,b| %>
+    <div class="alert alert-success"> <%= b %> </div>
+    <% end %>
+
+    <!--    <div class="row" align='center'>
+            <div class="col-lg-12 text-center" align='center'>
+                <h1>A Bootstrapx Starter Template</h1>
+                <p class="lead">Complete with pre-defined file paths that you won't have to change!!</p>
+                <ul class="list-unstyled" align='center'>
+                    <!--
+                    <li>Bootstrap v3.3.7</li>
+                    <li>jQuery v1.11.1</li> 
+                    
+                </ul>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <div align="center">
+    	<script src="js/jquery.js"></script>
+    <div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+
+		<%= yield %>
+	</body>
+
+	<footer style=background:#ad2401, width:100%, align:"center">
+<br><p style=color:white> Created by Daniel Bailey</p>
+	</footer>
+
+</html>
